@@ -2,15 +2,11 @@ def getTotal(amount, sum, VAT):
     balance = sum - (amount * VAT)
     return balance
 
-    # You could simplify this code by just  returning "sum - (amount * VAT)"
-
-
+   
 def userInput():
-    # I renamed all variables starting with caps as they go against variable naming conventions in python
-    amount = int(input(" Enter the total amount to be paid: "))  # Added closing bracket
-
-    print("Total is: KES {0:.2f} ".format(amount))  # Python's format() function only takes one argument. To
-    # format the output to 2dp, I added 0:.2f into the brackets used
+   
+    amount = int(input(" Enter the total amount to be paid: "))  
+    print("Total is: KES {0:.2f} ".format(amount))  
 
     sum = int(input(" Enter the amount paid:"))
     print("amount is: KES {0:.2f} ".format(sum))
