@@ -1,15 +1,26 @@
-def getTotal(Amount,Sum,VAT):
-    Balance=Sum-(Amount*VAT)
-    return Balance
-def UserInput():
-    Amount=int(input(" Enter the total amount to be paid: ")
-    print("Total is: KES {} ".format(Amount, ",.2f"))
-    Sum=int(input( " Enter the amount paid:"))
-    print("Amount is: KES {} ".format(Sum, ",.2f"))
-    VAT=float(input( " Enter the TAX rate:")
-    print("VAT is: KES {} ".format(VAT, ".2f"))
-    Balance=getTotal(Amount,Sum,VAT)
-    print("Your Balance is: KES {} ".format(Balance,",.2f"))
-    print(Balance)
-UserInput()
+def getTotal(amount, sum, VAT):
+    balance = sum - (amount * VAT)
+    return balance
 
+    # You could simplify this code by just  returning "sum - (amount * VAT)"
+
+
+def userInput():
+    # I renamed all variables starting with caps as they go against variable naming conventions in python
+    amount = int(input(" Enter the total amount to be paid: "))  # Added closing bracket
+
+    print("Total is: KES {0:.2f} ".format(amount))  # Python's format() function only takes one argument. To
+    # format the output to 2dp, I added 0:.2f into the brackets used
+
+    sum = int(input(" Enter the amount paid:"))
+    print("amount is: KES {0:.2f} ".format(sum))
+    vat = float(input(" Enter the TAX rate:"))
+    print("VAT is: KES {0:.2f} ".format(vat))
+
+    balance = getTotal(amount, sum, vat)
+
+    print("Your balance is: KES {0:.2f} ".format(balance))
+    print(balance)
+
+
+userInput()
